@@ -7,8 +7,9 @@ import static java.lang.Integer.valueOf;
 public class Main {
 
     public static void main(String[] args) {
-	    String solution = "";
-        String guess = "";
+	// Edit these variables to test the program. I'm too lazy to implement Scanner. Maybe tomorrow.
+	String solution = "aloof";
+        String guess = "await";
 
         // Turn all inputs to lowercase
         String lowerSolution = solution.toLowerCase();
