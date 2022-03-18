@@ -22,15 +22,15 @@ public class Main {
 
         } while (guess.length() != 5);
 
-        // Turn all inputs to lowercase
+      
         String lowerSolution = solution.toLowerCase();
         String lowerGuess = guess.toLowerCase();
 
-        // Convert to character arrays
+      
         char[] lowerSolutionArray = lowerSolution.toCharArray();
         char[] lowerGuessArray = lowerGuess.toCharArray();
 
-        // Create Hash Map for Solution and Guess, Key being the character, value being list of indexes where character occurs
+        
         Map<Character, List<Integer>> solutionMap = Main.createMap(lowerSolutionArray);
         Map<Character, List<Integer>> guessMap= Main.createMap(lowerGuessArray);
 
@@ -45,10 +45,10 @@ public class Main {
         // i -> 3
         // t -> 4
 
-        // Result array
+       
         String[] result = new String[lowerGuessArray.length];
 
-        // Iterate over each entry in the guess HashMap
+       
         for (Map.Entry<Character, List<Integer>> entry: guessMap.entrySet()) {
             char character = entry.getKey();
             List<Integer> indexes = entry.getValue();
@@ -63,7 +63,7 @@ public class Main {
                 }
                 for(int i: correctIndexes){
                     result[i] = "🟩";
-                    // Remove the object from the list
+                    
                     indexes.remove(valueOf(i));
                     numCharSolutionOccurrences--;
                 }
